@@ -1,7 +1,7 @@
 pip3 install pipreqs
 
 # Run in current directory
-python3 -m  --force pipreqs.pipreqs .
+python3 -m pipreqs.pipreqs --force .
 
 pip install -r requirements.txt
 
