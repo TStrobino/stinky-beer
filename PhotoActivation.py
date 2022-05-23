@@ -8,7 +8,7 @@ import sys
 import time
 import RPi.GPIO as GPIO
 def setup_GPIO():
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     GPIO.setup(RED_PORT, GPIO.OUT)
     GPIO.setup(GREEN_PORT, GPIO.OUT)
     GPIO.setup(BLUE_PORT, GPIO.OUT)
@@ -18,7 +18,7 @@ def setRed(value):
 
 def setGreen(value):
     GPIO.PWM(GREEN_PORT, value)
-    
+
 def setBlue(value):
     GPIO.PWM(BLUE_PORT, value)
 
