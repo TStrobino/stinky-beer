@@ -8,7 +8,6 @@ import sys
 import time
 import RPi.GPIO as GPIO
 def setup_GPIO():
-    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(RED_PORT, GPIO.OUT)
     GPIO.setup(GREEN_PORT, GPIO.OUT)
