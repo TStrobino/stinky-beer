@@ -154,3 +154,8 @@ cython_debug/
 # DB DATA
 
 /db/data
+
+
+# macOS DS_STORE
+
+*.DS_STORE
