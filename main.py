@@ -8,7 +8,7 @@ import PhotoActivation
 import time
 def main():
     print("Init...")
-    print(Panel(Text("ASTRO YEAST", justify="center", style="bold green")))
+    print(Panel(Text("ASTRO YEAST STINKY BEER", justify="center", style="bold green")))
     PhotoActivation.setup_GPIO()
     PhotoActivation.setBlue(255)
     time.sleep(1)
