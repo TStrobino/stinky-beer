@@ -12,3 +12,10 @@ docker-compose run web python manage.py migrate
 ```
 docker-compose run web python manage.py makemigrations
 ```
+
+## NEXT.js Dashboard
+
+```
+cd next-dashboard
+yarn install && yarn run dev
+```
