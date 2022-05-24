@@ -11,14 +11,24 @@ services:
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8042
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8042:8042"
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    depends_on:
+      - db
+      - migration
+    links:
+      - db:db
+  migration:
+    image: postgres
+    command: python manage.py migrate
+    volumes:
+      - .:/code
     depends_on:
       - db
